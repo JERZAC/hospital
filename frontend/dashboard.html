@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>HospitalTech AI</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <h2>🏥 HospitalTech AI</h2>
+
+      <div>
+        <span id="userName"></span>
+
+        <button onclick="logout()">Salir</button>
+      </div>
+    </header>
+
+    <main class="dashboard">
+      <h1>Dashboard</h1>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Total Tickets</h3>
+
+          <span id="totalTickets"> 0 </span>
+        </div>
+
+        <div class="card">
+          <h3>Abiertos</h3>
+
+          <span id="openTickets"> 0 </span>
+        </div>
+
+        <div class="card">
+          <h3>Críticos</h3>
+
+          <span id="criticalTickets"> 0 </span>
+        </div>
+      </div>
+
+      <button onclick="showTicketForm()" class="primary-button">
+        + Nuevo ticket
+      </button>
+
+      <section id="ticketForm" class="ticket-form hidden">
+        <h2>Nuevo ticket</h2>
+
+        <form id="createTicketForm">
+          <input type="text" id="title" placeholder="Título" required />
+
+          <textarea
+            id="description"
+            placeholder="Describe el problema"
+            required
+          ></textarea>
+
+          <input
+            type="text"
+            id="department"
+            placeholder="Departamento"
+            required
+          />
+
+          <label> Impacto </label>
+
+          <select id="impact">
+            <option value="1">Bajo</option>
+
+            <option value="2">Medio</option>
+
+            <option value="3">Alto</option>
+          </select>
+
+          <label> Urgencia </label>
+
+          <select id="urgency">
+            <option value="1">Baja</option>
+
+            <option value="2">Media</option>
+
+            <option value="3">Alta</option>
+          </select>
+
+          <button type="submit">Crear ticket</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Tickets</h2>
+
+        <div id="ticketsContainer"></div>
+      </section>
+    </main>
+
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>
