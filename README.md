@@ -691,4 +691,4 @@ Sistema web de soporte técnico hospitalario desarrollado como proyecto académi
 
 ## 📄 Licencia
 
-Proyecto académico CRISTHIAN ANDRES JERE AREVALO.
+Proyecto académico CRISTHIAN ANDRES JEREZ AREVALO.
